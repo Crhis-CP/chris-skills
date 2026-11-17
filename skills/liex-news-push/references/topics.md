@@ -179,8 +179,9 @@
   - 口岸开放时间的变化；
   - 重大基础设施的招标和批准。
 - **不算**：和项目运输路线无关的市政道路维修（E7）；天气预报，除非已经导致道路或口岸关闭。
-- **官方渠道**：省政府；国家道路局（Vialidad Nacional）；边境口岸主管部门。
-- **检索词**：`Ruta Nacional 60 corte`、`Paso San Francisco cierre`、`Catamarca energía eléctrica minería`、`Fiambalá ruta`
+- **官方渠道**：国家道路局（Vialidad Nacional）的路况报告，El Esquiú 每天转载，见 `sources.md` 第二节 3.5；省政府和边境口岸主管部门的通报。
+- **注意**：口岸关闭时，写清是哪一侧关闭。比如 2026 年 11 月 17 日的报告：口岸因智利一侧 RCH 31 公路积雪关闭，阿根廷一侧 60 号国道可以通行。
+- **检索词**：`Ruta Nacional 60 corte`、`Paso San Francisco cierre`、`estado de rutas nacionales en Catamarca`、`Catamarca energía eléctrica minería`、`Fiambalá ruta`
 
 ## T13 卡塔马卡社会与社区｜议题分 2
 

@@ -27,10 +27,19 @@
   - BCRA 的 A 类通讯（Comunicación "A"）。B 类通讯不用看。
 - 人事任免、职务延期的正文，看一眼即可跳过。
 - 打开正文时，网页打不开（比如返回 503）的，记为“未覆盖”，下次巡检再试。
+- **读不到目录里的链接时**（有些网页工具只返回文字，不返回链接），用编号搜索详情页，例如搜 `"Resolución 1976/2026" boletinoficial`，再打开搜到的 `boletinoficial.gob.ar/detalleAviso/...` 页面。
 
 ### 2. 卡塔马卡本地媒体首页
 
 浏览标题，找矿业、锂、Liex、Zijin、Fiambalá、Tinogasta、权益金（regalías）、供应商（proveedores）、道路和口岸。
+
+**首页只显示最近一两天的文章。** 平时每 2 小时巡检一次，看首页就够了。首次运行或中断后补查过去几天时，要对每家媒体再做站内搜索，例如：
+
+- `site:elancasti.com.ar minería`、`site:elancasti.com.ar Liex`
+- `site:elesquiu.com litio`、`site:elesquiu.com Liex`
+- `site:catamarcartv.com Paso San Francisco`
+
+然后打开原文核对发布日期。
 
 | 媒体 | 网址 |
 |---|---|
@@ -41,6 +50,11 @@
 ### 3. 矿业专业媒体
 
 Panorama Minero：`https://www.panorama-minero.com/en/news`
+
+### 3.5 道路和口岸状况
+
+- El Esquiú 每天刊登国家道路局（Vialidad Nacional）卡塔马卡辖区的路况报告，标题是“Estado de rutas nacionales en Catamarca”。可以搜 `site:elesquiu.com estado de rutas nacionales en Catamarca` 找当天的一篇。
+- 道路和口岸状况以这份报告或政府通报为准。ruta0.com 这类第三方路况聚合网站，内容常常前后矛盾，只能当线索，不能当来源。
 
 ### 4. 其他官方渠道
 
