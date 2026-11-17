@@ -244,6 +244,7 @@
   - 供应商商会的封路、封堵厂区入口、罢工等行动；
   - 省政府针对矿业供应商的扶持政策，比如信贷和登记制度。
 - **不算**：只有呼吁、没有行动的声明。这类可以照常打分，B 项为 0 分，一般达不到推送线。
+- **和 T10 重叠时**：卡塔马卡省的本地采购法规和法案，同时属于 T10，按议题分高的 T10 算。
 - **官方渠道**：国家官方公报；卡塔马卡省矿业部；省议会。
 - **检索词**：`proveedores mineros Catamarca`、`CAPROMITI Tinogasta`、`compre local minería Catamarca`、`proveedor local RIGI`
 
