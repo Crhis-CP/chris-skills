@@ -1,6 +1,6 @@
 # 经验笔记：去哪找、怎么找
 
-这里记的是实测中积累的经验，**是参考，不是必须执行的步骤**。网站会改版、会拦截，这份笔记会随时更新。最后更新：2026-11-18。
+这里记的是实测中积累的经验，**是参考，不是必须执行的步骤**。网站会改版、会拦截，这份笔记会随时更新。最后更新：2026-11-18（12 个智能体实测之后）。
 
 ## 一、国家官方公报（必查）
 
@@ -15,16 +15,21 @@
 
 ## 二、卡塔马卡本地新闻（必查）
 
-**2026 年 11 月飞书智能体的实测结果：**
+**2026 年 11 月的实测结果**（飞书智能体 1 次，加上 12 个测试智能体）。能不能打开时好时坏，打不开就换一家：
 
-| 来源 | 网址 | 能否打开 |
+| 来源 | 网址 | 实测情况 |
 |---|---|---|
-| El Ancasti | elancasti.com.ar | 被反爬拦截 |
-| El Esquiú | elesquiu.com | 被拦截（“Bloqueado: acceso automatizado”） |
-| 卡塔马卡省政府 | catamarca.gob.ar | 被拦截 |
-| 卡塔马卡广播电视台 | catamarcartv.com | 待测 |
-| La Unión | launion.digital | 待测 |
+| La Unión | launion.digital | 多数能打开 |
 | Reporte del Valle | reportedelvalle.com | 能打开 |
+| 卡塔马卡广播电视台 | catamarcartv.com | 多数能打开，偶尔限流 |
+| El Ancasti | elancasti.com.ar | 时好时坏，飞书智能体被拦截过 |
+| El Esquiú | elesquiu.com | 时好时坏，飞书智能体被拦截过 |
+| 卡塔马卡省政府 | catamarca.gob.ar | 多数被拦截 |
+
+**本地新闻最容易漏。** 实测中，卡塔马卡议员的本地采购法案、LIEX 被诈骗的案件，都只登在本地媒体上，大多数测试智能体没找到。找到它们的办法：
+
+- 站内搜索：`site:launion.digital minería`、`site:elancasti.com.ar Liex`、`site:elesquiu.com litio`；
+- 搜 LIEX 的名字时，也看外省媒体，比如诈骗案最早见于图库曼省的 Contexto Tucumán。
 
 **都打不开时：** 用搜索找线索，比如 `Catamarca minería`、`Fiambalá`、`Liex`、`Paso San Francisco`、`proveedores mineros Catamarca`，限定最近几天。搜索结果的标题和摘要只能当线索，必须在能打开的原文页面核实后才能推。
 
