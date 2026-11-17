@@ -25,6 +25,7 @@
   - 矿业秘书处（SECRETARÍA DE MINERÍA）的全部条目。
   - ARCA 的总决议（RESOLUCIÓN GENERAL）。
   - BCRA 的 A 类通讯（Comunicación "A"）。B 类通讯不用看。
+- 其他条目只看标题，不打开正文。
 - 人事任免、职务延期的正文，看一眼即可跳过。
 - 打开正文时，网页打不开（比如返回 503）的，记为“未覆盖”，下次巡检再试。
 - **读不到目录里的链接时**（有些网页工具只返回文字，不返回链接），用编号搜索详情页，例如搜 `"Resolución 1976/2026" boletinoficial`，再打开搜到的 `boletinoficial.gob.ar/detalleAviso/...` 页面。
