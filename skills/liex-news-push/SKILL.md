@@ -42,7 +42,18 @@ description: LIEX（紫金矿业阿根廷子公司，运营卡塔马卡省 3Q �
    - 经济部（MINISTERIO DE ECONOMÍA）的决议要打开正文看：RIGI 的批准就在这里，但标题只有编号。
    - 标题提到 749/2024（RIGI 实施细则）、27.742、24.196、26.639、glaciares、exportación 的法令，也要打开正文。
    - 读不到目录里的链接时，用编号搜索详情页。
-2. **卡塔马卡本地媒体首页**：`https://www.elancasti.com.ar/`、`https://www.elesquiu.com/`，浏览标题。
+2. **卡塔马卡本地新闻**：
+   - 按顺序试下面几个首页，打得开的就浏览标题：
+     - `https://catamarcartv.com/`
+     - `https://www.launion.digital/`
+     - `https://www.elancasti.com.ar/`
+     - `https://www.elesquiu.com/`
+
+     后两家在飞书智能体的自检中被反爬机制拦截。
+   - 都打不开时，用搜索找线索，比如 `Catamarca minería`、`Fiambalá`、`Liex`、`Paso San Francisco`，限定最近几天。搜索结果的标题和摘要**只能当线索**，必须在能打开的原文页面核实后才能推。打不开原文、又找不到第二个能打开的来源的，按 V6 不推。
+   - 演练时在覆盖说明里写明哪个来源打开了、哪个没打开。
+
+**网页逐个打开，同时最多 3 个。** 并行打开太多，会超时。
 
 **防日期陷阱：** 网页顶部显示的日期，常常是网站当天的日期。以正文的发布日期为准；事件日期按事件发生日或官方公布日算，媒体报道日不算。
 
