@@ -7,7 +7,8 @@ Reusable AI agent skills, organized by domain.
 
 | 领域 | 技能 | 说明 | 状态 |
 |---|---|---|---|
-| 矿业资讯 `mining-news/` | [liex-news-push](mining-news/liex-news-push/SKILL.md) | 阿根廷 LIEX 公司新闻：筛选、评分，再分精选和非精选推送到飞书 | 草稿：规则已提取，未本地化 |
+| 思考方法 `thinking/` | [first-principles-reframe](thinking/first-principles-reframe/SKILL.md) | 动手前先重构需求：第一性原理、区分目标与手段、跨领域借鉴、提问对齐、给推荐 | 可用 |
+| 矿业资讯 `mining-news/` | [liex-news-push](mining-news/liex-news-push/SKILL.md) | 阿根廷 LIEX 公司新闻：筛选、评分，再分档推送到飞书 | 草稿：规则已提取，本地化指南见 [LOCALIZATION.md](mining-news/liex-news-push/LOCALIZATION.md) |
 
 ## 目录约定
 
@@ -29,4 +30,4 @@ Reusable AI agent skills, organized by domain.
 
 ## 许可
 
-MIT，见 [LICENSE](LICENSE)。部分规则来自 AI矿策 和它的上游 AIHOT，来源说明见 [NOTICE](NOTICE)。
+MIT，见 [LICENSE](LICENSE)。部分规则来自 AI矿策，其中一部分最早出自 AIHOT，所以 LICENSE 里保留了一行 AIHOT 版权声明。

@@ -5,7 +5,7 @@ description: 每天搜集与阿根廷 LIEX 公司（紫金矿业阿根廷子公�
 
 # LIEX 新闻推送
 
-> **状态：草稿。** 规则是从 AI矿策（AI-MINE）原样提取的，**还没有做 LIEX 本地化**。上线前先处理完 `references/06-localization-notes.md` 里的 5 个问题。
+> **状态：草稿。** 规则是从 AI矿策（AI-MINE）原样提取的，**还没有做 LIEX 本地化**。本地化按 `LOCALIZATION.md` 进行；那份指南里的问题回答完之前，下面的流程和推送格式都只是占位。
 
 ## 做什么
 

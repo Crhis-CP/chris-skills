@@ -59,4 +59,4 @@
 
 ## 许可
 
-AI-MINE 仓库是 MIT 许可（版权人 Chirs Codex）；工程起点 AIHOT 也是 MIT（版权人“数字生命卡兹克”，原文在仓库 `LICENSES/AIHOT-MIT.txt`）。以后放进公开技能仓库时，附上这两份许可声明即可。
+AI-MINE 是 MIT 许可（版权人 Chirs Codex）。`source/selection-score*.md` 和 `source/selection.ts` 是从上游 AIHOT（MIT，版权人“数字生命卡兹克”）改造来的，所以本仓库根目录的 `LICENSE` 保留了一行 AIHOT 版权声明。
