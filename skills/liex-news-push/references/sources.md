@@ -10,17 +10,51 @@
 
 专业机构的解读和官方原文不一致时，以官方原文为准。清单用来优先查找，不是白名单；清单外的来源也能用，但同样要过七项核实。
 
-## 二、每次巡检先查的官方渠道
+## 二、检索清单（每次巡检按顺序逐项打开）
 
-| 渠道 | 看什么 |
+### 1. 国家官方公报第一部分
+
+- **网址：** `https://www.boletinoficial.gob.ar/seccion/primera/年月日`，例如 `https://www.boletinoficial.gob.ar/seccion/primera/20261116`。
+- **频率：** 每个工作日一期。当天第一次巡检时处理当天的一期；首次运行或中断过的，补查过去 7 天每一天的。
+- **目录标题常常不写主题**，下面几类条目必须打开正文看：
+  - 经济部（MINISTERIO DE ECONOMÍA）的**全部决议**。RIGI 的批准和驳回都在这里，标题只有编号。
+  - 行政机关（PODER EJECUTIVO）的法令，标题提到下列编号或词语的：
+    - 749/2024（RIGI 实施细则）、27.742（设立 RIGI 的法律）；
+    - 24.196、Código de Minería、26.639、glaciares；
+    - exportación、derechos de exportación。
+  - 矿业秘书处（SECRETARÍA DE MINERÍA）的全部条目。
+  - ARCA 的总决议（RESOLUCIÓN GENERAL）。
+  - BCRA 的 A 类通讯（Comunicación "A"）。B 类通讯不用看。
+- 人事任免、职务延期的正文，看一眼即可跳过。
+- 打开正文时，网页打不开（比如返回 503）的，记为“未覆盖”，下次巡检再试。
+
+### 2. 卡塔马卡本地媒体首页
+
+浏览标题，找矿业、锂、Liex、Zijin、Fiambalá、Tinogasta、权益金（regalías）、供应商（proveedores）、道路和口岸。
+
+| 媒体 | 网址 |
 |---|---|
-| 国家官方公报 boletinoficial.gob.ar | 第一部分（法律、法令、决议）的当日目录，找矿业、锂、RIGI、冰川、出口、外汇相关的条目 |
-| 卡塔马卡省官方公报、省政府门户 catamarca.gob.ar | 省级法律、法令、矿业部决议 |
-| 国会：众议院 hcdn.gob.ar、参议院 senado.gob.ar | 冰川法、劳动改革等法案的新阶段和表决结果 |
-| BCRA bcra.gob.ar | 新发布的 A 类通讯 |
-| ARCA arca.gob.ar | 新发布的总决议 |
-| argentina.gob.ar | 经济部、矿业秘书处、RIGI 的公告 |
-| 最高法院新闻中心 cij.gov.ar | 和矿业、环境、税收有关的裁定 |
+| El Ancasti | `https://www.elancasti.com.ar/` |
+| 卡塔马卡广播电视台 | `https://catamarcartv.com/` |
+| El Esquiú | `https://www.elesquiu.com/`。首页常拒绝自动访问，打不开就搜 `site:elesquiu.com Liex`、`site:elesquiu.com minería` |
+
+### 3. 矿业专业媒体
+
+Panorama Minero：`https://www.panorama-minero.com/en/news`
+
+### 4. 其他官方渠道
+
+有对应的候选时再查，用来核实：
+
+- 国会：众议院 hcdn.gob.ar、参议院 senado.gob.ar；
+- BCRA：bcra.gob.ar；
+- ARCA：arca.gob.ar；
+- 卡塔马卡省政府：catamarca.gob.ar（自动访问常返回 403）；
+- 最高法院新闻中心：cij.gov.ar。
+
+### 5. 用议题卡的检索词搜索补漏
+
+搜索结果里的日期只能当线索，必须打开原文核对发布日期。
 
 ## 三、法律状态词表
 
