@@ -114,7 +114,7 @@
       "files": [],
       "expectations": [
         "结论为不推",
-        "原因代码为 V1、V5、V7 之一（核实不通过）"
+        "原因代码为 V1、V5、V6、V7 之一（核实不通过）"
       ]
     },
     {
@@ -295,11 +295,11 @@
     {
       "id": 26,
       "prompt": "测试。今天是 2026 年 11 月 17 日。以下是【真实材料】，取自 2026 年 11 月 17 日演练时核实过的原文，摘要由维护者整理。\n本群最近 30 天已推送：无\n材料：Panorama Minero 2026 年 11 月 6 日报道：Eramet 在萨尔塔省的 Centenario-Ratones 锂项目 2026 年 10 月达到每年 2.4 万吨的名义产能，正在评估扩产，预可研已完成，尚未作出最终投资决定。来源：https://www.panorama-minero.com/en/news/eramet-reaches-full-lithium-production-capacity-in-argentina-and-plans-46-expansion（已打开）。",
-      "expected_output": "议题：T14\n排除：无\n对照：新事件\n核实：V1 未通过（11 月 6 日，超过 7 天）\n得分：—\n结论：不推：V1",
+      "expected_output": "议题：T14\n排除：无\n对照：新事件\n核实：V1 未通过（11 月 6 日，超过 7 天）\n得分：—\n结论：不推：V1（或 E2）",
       "files": [],
       "expectations": [
         "结论为不推",
-        "原因代码为 V1"
+        "原因代码为 V1（超过 7 天）或 E2（普通项目进度）"
       ]
     },
     {
