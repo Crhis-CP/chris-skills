@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - "skills/**"
+      - "README.md"
+      - "AGENTS.md"
+      - ".claude-plugin/**"
       - ".github/workflows/package-skills.yml"
   workflow_dispatch:
 
@@ -21,20 +24,62 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: 检查：没有密钥，测试案例格式正确，分类清单齐全
+      - name: 按 AGENTS.md 检查仓库规则
         run: |
-          if grep -rEn "open\.feishu\.cn/open-apis/bot/v2/hook|open\.larksuite\.com/open-apis/bot/v2/hook|cli_[0-9a-z]{16}" skills; then
-            echo "发现疑似飞书 Webhook 或 App ID，停止发布"; exit 1
-          fi
-          for f in skills/*/evals/evals.json; do
-            [ -e "$f" ] && python3 -m json.tool "$f" > /dev/null
-          done
-          python3 -m json.tool .claude-plugin/marketplace.json > /dev/null
-          for d in skills/*/; do
-            name="${d%/}"; name="${name#skills/}"
-            [ -f "skills/$name/SKILL.md" ] || { echo "skills/$name 缺少 SKILL.md"; exit 1; }
-            grep -q "\"./skills/$name\"" .claude-plugin/marketplace.json || { echo "skills/$name 没有写进 marketplace.json"; exit 1; }
-          done
+          python3 - <<'EOF'
+          import json, pathlib, re, sys
+          errors = []
+          readme = pathlib.Path("README.md").read_text()
+          market = json.loads(pathlib.Path(".claude-plugin/marketplace.json").read_text())
+          listed = {s for p in market["plugins"] for s in p["skills"]}
+          secret = re.compile(r"open\.(feishu\.cn|larksuite\.com)/open-apis/bot/v2/hook|cli_[0-9a-z]{16}")
+          for d in sorted(pathlib.Path("skills").iterdir()):
+              if not d.is_dir():
+                  continue
+              n = d.name
+              if not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", n) or len(n) > 64:
+                  errors.append(f"{n}：文件夹名只能用小写英文、数字和连字符，不超过 64 个字符")
+              skill = d / "SKILL.md"
+              if not skill.exists():
+                  errors.append(f"{n}：缺少 SKILL.md"); continue
+              m = re.match(r"---\n(.*?)\n---\n", skill.read_text(), re.S)
+              meta = dict(l.split(":", 1) for l in m.group(1).splitlines() if ":" in l) if m else {}
+              if meta.get("name", "").strip() != n:
+                  errors.append(f"{n}：SKILL.md 的 name 必须是 {n}")
+              desc = meta.get("description", "").strip()
+              if not desc or len(desc) > 1024:
+                  errors.append(f"{n}：SKILL.md 的 description 不能为空，且不超过 1024 个字符")
+              if len(skill.read_text().splitlines()) > 500:
+                  errors.append(f"{n}：SKILL.md 超过 500 行，请拆到 references/")
+              if not (d / "README.md").exists():
+                  errors.append(f"{n}：缺少 README.md")
+              ev = d / "evals" / "evals.json"
+              if not ev.exists():
+                  errors.append(f"{n}：缺少 evals/evals.json")
+              else:
+                  e = json.loads(ev.read_text())
+                  if e.get("skill_name") != n:
+                      errors.append(f"{n}：evals.json 的 skill_name 必须是 {n}")
+                  cases = e.get("evals", [])
+                  if len(cases) < 5:
+                      errors.append(f"{n}：evals.json 至少要有 5 个案例")
+                  for c in cases:
+                      if not all(c.get(k) for k in ("id", "prompt", "expected_output", "expectations")):
+                          errors.append(f"{n}：evals.json 案例 {c.get('id')} 缺少 prompt、expected_output 或 expectations")
+              if f"./skills/{n}" not in listed:
+                  errors.append(f"{n}：没有登记到 .claude-plugin/marketplace.json")
+              if f"skills/{n}/" not in readme:
+                  errors.append(f"{n}：没有登记到根目录 README.md 的技能目录")
+              for f in d.rglob("*"):
+                  if f.is_file() and secret.search(f.read_text(errors="ignore")):
+                      errors.append(f"{n}：{f} 里有疑似飞书 Webhook 或 App ID")
+          for s in listed:
+              if not pathlib.Path(s, "SKILL.md").exists():
+                  errors.append(f"marketplace.json 登记了不存在的技能：{s}")
+          if errors:
+              print("\n".join("✗ " + x for x in errors)); sys.exit(1)
+          print("✓ 全部技能符合 AGENTS.md 的规则")
+          EOF
 
       - name: 打包（不含 evals/）
         run: |

@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "mining",
-      "description": "矿业：阿根廷 LIEX 经营环境监测与飞书推送",
+      "description": "矿业：LIEX 新闻推送监测（阿根廷）",
       "source": "./",
       "strict": false,
       "skills": [
