@@ -1,0 +1,21 @@
+{
+  "name": "chris-skills",
+  "owner": {
+    "name": "Chirs Codex"
+  },
+  "metadata": {
+    "description": "Chris 的 AI 技能库：可以直接上传给智能体使用的技能",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "mining",
+      "description": "矿业：阿根廷 LIEX 经营环境监测与飞书推送",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/liex-news-push"
+      ]
+    }
+  ]
+}

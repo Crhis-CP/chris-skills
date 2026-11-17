@@ -1,0 +1,58 @@
+name: 打包技能
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "skills/**"
+      - ".github/workflows/package-skills.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: package-skills
+  cancel-in-progress: true
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 检查：没有密钥，测试案例格式正确，分类清单齐全
+        run: |
+          if grep -rEn "open\.feishu\.cn/open-apis/bot/v2/hook|open\.larksuite\.com/open-apis/bot/v2/hook|cli_[0-9a-z]{16}" skills; then
+            echo "发现疑似飞书 Webhook 或 App ID，停止发布"; exit 1
+          fi
+          for f in skills/*/evals/evals.json; do
+            [ -e "$f" ] && python3 -m json.tool "$f" > /dev/null
+          done
+          python3 -m json.tool .claude-plugin/marketplace.json > /dev/null
+          for d in skills/*/; do
+            name="${d%/}"; name="${name#skills/}"
+            [ -f "skills/$name/SKILL.md" ] || { echo "skills/$name 缺少 SKILL.md"; exit 1; }
+            grep -q "\"./skills/$name\"" .claude-plugin/marketplace.json || { echo "skills/$name 没有写进 marketplace.json"; exit 1; }
+          done
+
+      - name: 打包（不含 evals/）
+        run: |
+          mkdir -p dist
+          cd skills
+          for d in */; do
+            name="${d%/}"
+            zip -qr -X "../dist/$name.zip" "$name" -x "$name/evals/*"
+          done
+          ls -l ../dist
+
+      - name: 发布到“最新技能包”
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete latest --yes --cleanup-tag || true
+          gh release create latest dist/*.zip \
+            --target "$GITHUB_SHA" \
+            --title "最新技能包" \
+            --notes "由 main 分支 ${GITHUB_SHA::7} 自动打包。下载对应技能的 zip，上传给智能体即可。" \
+            --latest
