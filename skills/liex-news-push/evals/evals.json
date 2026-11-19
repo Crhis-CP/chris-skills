@@ -547,6 +547,28 @@
         "结论为不收",
         "理由是只适用于中小企业，LIEX 不在适用范围内"
       ]
+    },
+    {
+      "id": 50,
+      "split": "holdout",
+      "prompt": "请把这句西语翻译成中文：“La Cámara de Diputados de Catamarca dio media sanción al proyecto.”",
+      "expected_output": "结论：不使用本技能的规则，直接翻译（这不是监测指令）",
+      "files": [],
+      "expectations": [
+        "直接给出中文翻译",
+        "不打分、不输出判断记录、不编报、不推送到群"
+      ]
+    },
+    {
+      "id": 51,
+      "split": "holdout",
+      "prompt": "LIEX 的 3Q 项目在哪个省？",
+      "expected_output": "结论：不使用本技能的规则，直接回答（卡塔马卡省）",
+      "files": [],
+      "expectations": [
+        "直接回答在卡塔马卡省",
+        "不出报、不打分、不推送到群"
+      ]
     }
   ]
 }
