@@ -1,6 +1,6 @@
 # 经验笔记：去哪找、怎么找
 
-这里记的是实测中积累的经验，**是参考，不是必须执行的步骤**。网站会改版、会拦截，这份笔记会随时更新。最后更新：2026-11-18（12 个智能体实测之后）。
+这里记的是实测中积累的经验。除第六节的“每期必搜”外，**都是参考，不是必须执行的步骤**。网站会改版、会拦截，这份笔记会随时更新。最后更新：2026-11-19（对照往期人工通讯之后）。
 
 ## 一、国家官方公报（必查）
 
@@ -45,6 +45,9 @@
 - **央行和税务局：** bcra.gob.ar、arca.gob.ar。它们的新规同时刊登在官方公报上，从公报看更方便。
 - **全国性媒体：** Infobae、La Nación、Clarín、Ámbito、El Cronista。
 - **矿业媒体：** Panorama Minero（panorama-minero.com/en/news）、BNamericas。
+- **省议会：** 卡塔马卡省众议院、参议院的会议记录和新闻稿。自由贸易区、优先采购这类省级法案，常在这里先出现。
+- **国家和国际机构：** 联邦投资委员会（CFI）、IGF、美洲开发银行（BID）与卡塔马卡省政府的协议和评估，一般刊登在省政府网站和本地媒体上。
+- **海关：** 矿业进口优惠的申请和核验程序，通常以海关总署（DGA）的通告、或 ARCA 与矿业秘书处的联合决议形式出现在公报上。
 - **律所简报：** Marval O'Farrell Mairal、Bruchou & Funes de Rioja、Beccar Varela、Allende & Brea。官方原文打不开时，可以作为交叉核实的来源之一。
 
 ## 五、陷阱
@@ -54,7 +57,19 @@
 - **同时打开的网页不要超过 3 个，**否则会超时。
 - **不要自己推断星期几和节假日。**
 
-## 六、常用检索词
+## 六、检索词
+
+### 每期必搜
+
+下面每组检索词，每期都至少搜一遍，并限定在最近两天内。这些事项只靠公报和本地媒体首页找不全：
+
+- **国会：** `Senado aprobó minería`、`Diputados dictamen inversiones`、`media sanción ley`
+- **卡塔马卡省议会：** `Legislatura Catamarca aprobó`、`Diputados Catamarca media sanción`、`Senado Catamarca`
+- **法院：** `Corte Suprema fallo` 加 `minería`、`laboral` 或 `ambiental`
+- **ARCA：** `ARCA resolución general`
+- **LIEX：** `Liex`、`Zijin Catamarca`
+
+### 按需搜索
 
 - **LIEX：** `Liex`、`Tres Quebradas`、`Zijin Catamarca`
 - **法规：** `Ley de Glaciares`、`Decreto 749/2024 modificación`、`RIGI aprobación`、`Ley 24.196`、`derechos de exportación litio`、`BCRA Comunicación A dividendos`
